@@ -1,4 +1,4 @@
-package jeka.tsen.ExpenseTracker.dto;
+package jeka.tsen.ExpenseTracker.dto.Expenses;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1,7 +1,7 @@
 package jeka.tsen.ExpenseTracker.service.Category;
 
-import jeka.tsen.ExpenseTracker.dto.CategoryRequestDTO;
-import jeka.tsen.ExpenseTracker.dto.CategoryResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.Category.CategoryRequestDTO;
+import jeka.tsen.ExpenseTracker.dto.Category.CategoryResponseDTO;
 import jeka.tsen.ExpenseTracker.exception.ResourceNotFoundException;
 import jeka.tsen.ExpenseTracker.mapper.CategoryMapper;
 import jeka.tsen.ExpenseTracker.model.Category;

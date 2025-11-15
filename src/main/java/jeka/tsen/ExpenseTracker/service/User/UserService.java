@@ -1,7 +1,7 @@
 package jeka.tsen.ExpenseTracker.service.User;
 
-import jeka.tsen.ExpenseTracker.dto.UserRequestDTO;
-import jeka.tsen.ExpenseTracker.dto.UserResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.User.UserRequestDTO;
+import jeka.tsen.ExpenseTracker.dto.User.UserResponseDTO;
 import jeka.tsen.ExpenseTracker.exception.ResourceNotFoundException;
 import jeka.tsen.ExpenseTracker.mapper.UserMapper;
 import jeka.tsen.ExpenseTracker.model.User;

@@ -1,4 +1,4 @@
-package jeka.tsen.ExpenseTracker.dto;
+package jeka.tsen.ExpenseTracker.dto.User;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

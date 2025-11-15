@@ -1,10 +1,8 @@
 package jeka.tsen.ExpenseTracker.controller;
 
 import jakarta.validation.Valid;
-import jeka.tsen.ExpenseTracker.dto.UserRequestDTO;
-import jeka.tsen.ExpenseTracker.dto.UserResponseDTO;
-import jeka.tsen.ExpenseTracker.mapper.UserMapper;
-import jeka.tsen.ExpenseTracker.model.User;
+import jeka.tsen.ExpenseTracker.dto.User.UserRequestDTO;
+import jeka.tsen.ExpenseTracker.dto.User.UserResponseDTO;
 import jeka.tsen.ExpenseTracker.service.User.IUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,8 @@
 package jeka.tsen.ExpenseTracker.controller;
 
 import jakarta.validation.Valid;
-import jeka.tsen.ExpenseTracker.dto.CategoryRequestDTO;
-import jeka.tsen.ExpenseTracker.dto.CategoryResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.Category.CategoryRequestDTO;
+import jeka.tsen.ExpenseTracker.dto.Category.CategoryResponseDTO;
 import jeka.tsen.ExpenseTracker.service.Category.ICategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

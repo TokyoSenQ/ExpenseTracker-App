@@ -1,8 +1,7 @@
 package jeka.tsen.ExpenseTracker.service.Category;
 
-import jeka.tsen.ExpenseTracker.dto.CategoryRequestDTO;
-import jeka.tsen.ExpenseTracker.dto.CategoryResponseDTO;
-import jeka.tsen.ExpenseTracker.model.Expense;
+import jeka.tsen.ExpenseTracker.dto.Category.CategoryRequestDTO;
+import jeka.tsen.ExpenseTracker.dto.Category.CategoryResponseDTO;
 
 import java.util.List;
 import java.util.UUID;

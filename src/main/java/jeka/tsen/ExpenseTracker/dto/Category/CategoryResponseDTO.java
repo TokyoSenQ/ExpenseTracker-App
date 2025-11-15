@@ -1,4 +1,4 @@
-package jeka.tsen.ExpenseTracker.dto;
+package jeka.tsen.ExpenseTracker.dto.Category;
 
 import lombok.Builder;
 

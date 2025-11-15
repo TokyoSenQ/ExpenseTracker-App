@@ -1,4 +1,4 @@
-package jeka.tsen.ExpenseTracker.dto;
+package jeka.tsen.ExpenseTracker.dto.Category;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

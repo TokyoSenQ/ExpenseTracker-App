@@ -1,9 +1,7 @@
-package jeka.tsen.ExpenseTracker.dto;
+package jeka.tsen.ExpenseTracker.dto.User;
 
-import jeka.tsen.ExpenseTracker.model.Expense;
 import lombok.Builder;
 
-import java.util.List;
 import java.util.UUID;
 
 @Builder

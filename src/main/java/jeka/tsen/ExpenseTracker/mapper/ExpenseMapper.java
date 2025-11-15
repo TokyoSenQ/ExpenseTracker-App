@@ -1,7 +1,7 @@
 package jeka.tsen.ExpenseTracker.mapper;
 
-import jeka.tsen.ExpenseTracker.dto.ExpenseRequestDTO;
-import jeka.tsen.ExpenseTracker.dto.ExpenseResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.Expenses.ExpenseRequestDTO;
+import jeka.tsen.ExpenseTracker.dto.Expenses.ExpenseResponseDTO;
 import jeka.tsen.ExpenseTracker.model.Expense;
 
 import java.time.LocalDate;
