@@ -2,6 +2,7 @@ package jeka.tsen.ExpenseTracker.service.User;
 
 import jeka.tsen.ExpenseTracker.dto.User.UserRequestDTO;
 import jeka.tsen.ExpenseTracker.dto.User.UserResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.User.UserUpdateDTO;
 import jeka.tsen.ExpenseTracker.exception.ResourceNotFoundException;
 import jeka.tsen.ExpenseTracker.mapper.UserMapper;
 import jeka.tsen.ExpenseTracker.model.User;
@@ -42,5 +43,17 @@ public class UserService implements IUserService {
     @Override
     public void deleteUser(UUID id) {
         userRepository.deleteById(id);
+    }
+
+    @Override
+    public UserResponseDTO updateUser(UUID id, UserUpdateDTO dto) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found: " + id));
+
+        user.setName(dto.getName());
+        user.setEmail(dto.getEmail());
+        User saved = userRepository.save(user);
+
+        return UserMapper.toDto(saved);
     }
 }

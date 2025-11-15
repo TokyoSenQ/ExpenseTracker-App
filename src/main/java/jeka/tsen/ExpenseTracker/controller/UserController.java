@@ -3,6 +3,7 @@ package jeka.tsen.ExpenseTracker.controller;
 import jakarta.validation.Valid;
 import jeka.tsen.ExpenseTracker.dto.User.UserRequestDTO;
 import jeka.tsen.ExpenseTracker.dto.User.UserResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.User.UserUpdateDTO;
 import jeka.tsen.ExpenseTracker.service.User.IUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -39,5 +40,12 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<UserResponseDTO> updateUser(
+            @PathVariable UUID id,
+            @Valid @RequestBody UserUpdateDTO dto) {
+
+        return ResponseEntity.ok(userService.updateUser(id, dto));
+    }
 
 }
