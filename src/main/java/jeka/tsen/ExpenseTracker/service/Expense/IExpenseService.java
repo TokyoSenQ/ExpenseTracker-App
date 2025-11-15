@@ -2,6 +2,7 @@ package jeka.tsen.ExpenseTracker.service.Expense;
 
 import jeka.tsen.ExpenseTracker.dto.ExpenseRequestDTO;
 import jeka.tsen.ExpenseTracker.dto.ExpenseResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.ExpenseUpdateDTO;
 import jeka.tsen.ExpenseTracker.model.Expense;
 
 import java.util.List;
@@ -12,4 +13,5 @@ public interface IExpenseService {
     ExpenseResponseDTO addExpense(ExpenseRequestDTO dto);
     void deleteExpense(UUID id);
     ExpenseResponseDTO getExpenseDtoById(UUID id);
+    ExpenseResponseDTO updateExpense(UUID id, ExpenseUpdateDTO updateDTO);
 }
