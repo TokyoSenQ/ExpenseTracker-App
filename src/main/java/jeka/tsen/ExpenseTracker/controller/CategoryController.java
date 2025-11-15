@@ -3,6 +3,7 @@ package jeka.tsen.ExpenseTracker.controller;
 import jakarta.validation.Valid;
 import jeka.tsen.ExpenseTracker.dto.Category.CategoryRequestDTO;
 import jeka.tsen.ExpenseTracker.dto.Category.CategoryResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.Category.CategoryUpdateDTO;
 import jeka.tsen.ExpenseTracker.service.Category.ICategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -39,4 +40,11 @@ public class CategoryController {
         return ResponseEntity.noContent().build();
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<CategoryResponseDTO> updateCategory(
+            @PathVariable UUID id,
+            @Valid @RequestBody CategoryUpdateDTO dto) {
+
+        return ResponseEntity.ok(categoryService.updateCategory(id, dto));
+    }
 }

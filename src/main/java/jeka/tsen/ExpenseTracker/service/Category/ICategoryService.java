@@ -2,6 +2,7 @@ package jeka.tsen.ExpenseTracker.service.Category;
 
 import jeka.tsen.ExpenseTracker.dto.Category.CategoryRequestDTO;
 import jeka.tsen.ExpenseTracker.dto.Category.CategoryResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.Category.CategoryUpdateDTO;
 
 import java.util.List;
 import java.util.UUID;
@@ -11,4 +12,5 @@ public interface ICategoryService {
     List<CategoryResponseDTO> getAllCategories();
     CategoryResponseDTO addCategory(CategoryRequestDTO dto);
     void deleteCategory(UUID id);
+    CategoryResponseDTO updateCategory(UUID id, CategoryUpdateDTO dto);
 }

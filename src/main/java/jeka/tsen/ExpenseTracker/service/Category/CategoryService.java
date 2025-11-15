@@ -2,6 +2,7 @@ package jeka.tsen.ExpenseTracker.service.Category;
 
 import jeka.tsen.ExpenseTracker.dto.Category.CategoryRequestDTO;
 import jeka.tsen.ExpenseTracker.dto.Category.CategoryResponseDTO;
+import jeka.tsen.ExpenseTracker.dto.Category.CategoryUpdateDTO;
 import jeka.tsen.ExpenseTracker.exception.ResourceNotFoundException;
 import jeka.tsen.ExpenseTracker.mapper.CategoryMapper;
 import jeka.tsen.ExpenseTracker.model.Category;
@@ -46,5 +47,16 @@ public class CategoryService implements ICategoryService {
             throw new ResourceNotFoundException("Category not found" +id);
         }
         categoryRepository.deleteById(id);
+    }
+
+    @Override
+    public CategoryResponseDTO updateCategory(UUID id, CategoryUpdateDTO dto) {
+        Category category = categoryRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Category not found: " + id));
+
+        category.setName(dto.getName());
+        Category saved = categoryRepository.save(category);
+
+        return CategoryMapper.toDto(saved);
     }
 }
