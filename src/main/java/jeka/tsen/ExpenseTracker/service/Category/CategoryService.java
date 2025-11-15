@@ -16,7 +16,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class CategoryService implements ICategoryService {
 
-    CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
 
     @Override
     public CategoryResponseDTO getCategoryById(UUID id) {
